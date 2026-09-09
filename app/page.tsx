@@ -67,7 +67,7 @@ export default function Home() {
         <div className="intro"><div className="eyebrow">{text.eyebrow}</div><h1>{text.brand}<span className="title-tag">{text.encyclopedia}</span></h1><p>{text.intro}</p><div className="intro-meta"><span>{text.version} 1.4.5</span><span>{t('chapterCount', { count: chapters.length })}</span><span>{text.facts}</span></div><div className="experience-track" aria-hidden="true"><span/></div></div>
         {!normalized && <div className="quick-links">{quick.map(item => <a key={item.id} href={`#${item.id}`} onClick={navigate}><span className={`item-sprite item-${item.icon}`} aria-hidden="true"/><div><small>{item.category}</small><strong>{chapters.find(chapter => chapter.id === item.id)?.title}</strong><span>{item.hint}</span></div><ArrowUpRight/></a>)}</div>}
         <details id="contribute" className="contribution-guide">
-          <summary>{text.helpTitle} <span>{text.reviewFlow}</span></summary>
+          <summary>{text.helpTitle}</summary>
           <p>{text.helpBody}</p><p>{text.submitReminder}</p>
           <a href={`${repository}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noreferrer">{text.editGuide}</a>
         </details>
