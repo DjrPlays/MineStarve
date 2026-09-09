@@ -9,11 +9,19 @@ const itemTiles: Record<string, [number, number]> = {
   '奶桶': [36, 7],
   '附魔书': [27, 12],
   '不死图腾': [26, 11],
+  'Bucket': [15, 1],
+  'Book (Pig Skin binding)': [58, 0],
+  'Book (Tentacle Spots binding)': [58, 0],
+  'Oak Boat': [26, 8],
+  'Oak Chest Boat': [27, 8],
+  'Milk Bucket': [36, 7],
+  'Enchanted Book': [27, 12],
+  'Totem of Undying': [26, 11],
 };
 
 export function RecipeItem({ name }: { name: string }) {
   const tile = itemTiles[name];
-  const ring = name === '七咒之戒' || name === '灵魂缝合';
+  const ring = ['七咒之戒', '灵魂缝合', 'Ring of Seven Curses', 'Soul Stitching'].includes(name);
   if (!tile && !ring) return <>{name}</>;
 
   const style = tile ? {

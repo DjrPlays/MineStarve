@@ -1,0 +1,19 @@
+{
+  "brand": "我的饥荒", "wiki": "模组玩家 Wiki", "version": "版本", "contents": "攻略目录",
+  "game": "饥荒联机版", "author": "模组作者 唐小可", "updated": "攻略更新 2026 年 9 月 9 日",
+  "contribute": "参与编辑", "skip": "跳转到攻略正文", "closeMenu": "关闭目录", "openMenu": "打开目录",
+  "guide": "玩家指南", "reference": "攻略与资料", "search": "搜索攻略", "searchHint": "搜索物品、附魔、玩法…", "clear": "清空搜索",
+  "eyebrow": "饥荒联机版 · 模组生存手册", "encyclopedia": "攻略百科", "intro": "《我的饥荒》的物品、配方、附魔与生物资料。",
+  "chapterCount": "{count} 个资料章节", "facts": "物品规则与数值速查", "growth": "装备成长", "relics": "遗物效果", "crafting": "制作配方",
+  "enchantHint": "书架、硝石与等级消耗", "totemHint": "装备在遗物栏才会生效", "recipeHint": "材料数量与制作条件",
+  "helpTitle": "参与完善 Wiki", "reviewFlow": "公开阅读 · GitHub 登录后编辑 · 唐小可审核发布",
+  "helpBody": "点击章节旁的“登录后编辑”，使用 GitHub 账号登录后修改文档。首次编辑按提示创建个人副本，保存修改后提交审核申请（Pull Request）。唐小可审核并合并后，页面才会更新。",
+  "submitReminder": "只保存到个人副本不会进入审核，请继续完成“Create pull request”。", "editGuide": "查看编辑说明 ↗",
+  "results": "找到 {count} 个包含“{query}”的章节。", "showAll": "显示全部", "noResults": "没有找到相关攻略", "trySearch": "试试“附魔”“书架”“奶桶”或“七咒”。",
+  "edit": "登录后编辑 ↗", "anchor": "链接到", "mechanics": "机制说明", "top": "回到顶部 ↑",
+  "language": "语言", "addTranslation": "添加翻译", "translateTitle": "翻译 Wiki", "languageCode": "目标语言代码", "chapter": "章节",
+  "translationSteps": "选择语言代码和章节，查看原文后登录 GitHub 创建或编辑译文，再提交审核申请。只翻译一个章节也可以；审核通过后，新语言会自动出现在菜单中。",
+  "sourceLink": "查看英文原文 ↗", "createTranslation": "登录后创建或编辑译文 ↗", "translationGuide": "查看翻译说明 ↗",
+  "invalidLocale": "请输入有效的语言代码，例如 ja、fr 或 pt-BR。", "translationFallback": "本章节尚无所选语言的译文，暂时显示英文。",
+  "translateChapter": "翻译本章节 ↗", "coverage": "已翻译 {count}/{total} 个章节", "uiFallback": "尚未翻译的界面文字使用英文。", "translationDraft": "请参考英文原文的格式，用完整译文替换此草稿后再提交。"
+}

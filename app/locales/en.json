@@ -1,0 +1,19 @@
+{
+  "brand": "MineStarve", "wiki": "Mod player Wiki", "version": "Version", "contents": "Contents",
+  "game": "Don't Starve Together", "author": "Mod author: Tangxiaoke", "updated": "Updated 9 September 2026",
+  "contribute": "Contribute", "skip": "Skip to the guide", "closeMenu": "Close contents", "openMenu": "Open contents",
+  "guide": "Player guide", "reference": "Guide and reference", "search": "Search the guide", "searchHint": "Items, enchantments, mechanics…", "clear": "Clear search",
+  "eyebrow": "Don't Starve Together · Mod survival handbook", "encyclopedia": "Wiki", "intro": "Items, recipes, enchantments and creatures in MineStarve.",
+  "chapterCount": "{count} chapters", "facts": "Item rules and stats", "growth": "Equipment progression", "relics": "Relic effects", "crafting": "Crafting",
+  "enchantHint": "Bookshelves, Nitre and level costs", "totemHint": "Equip in the relic slot to activate", "recipeHint": "Materials and requirements",
+  "helpTitle": "Help improve the Wiki", "reviewFlow": "Public reading · GitHub sign-in to edit · Reviewed by Tangxiaoke",
+  "helpBody": "Choose Edit with GitHub on a chapter and sign in to edit its document. Create a personal fork if prompted, save your changes and open a pull request. The public Wiki updates only after Tangxiaoke reviews and merges it.",
+  "submitReminder": "Saving to your own fork does not submit a review request. Complete Create pull request.", "editGuide": "Editing instructions ↗",
+  "results": "{count} chapters matching “{query}”.", "showAll": "Show all", "noResults": "No matching chapters", "trySearch": "Try enchanting, bookshelves, milk or curses.",
+  "edit": "Edit with GitHub ↗", "anchor": "Link to", "mechanics": "Mechanics", "top": "Back to top ↑",
+  "language": "Language", "addTranslation": "Add a translation", "translateTitle": "Translate the Wiki", "languageCode": "Target language code", "chapter": "Chapter",
+  "translationSteps": "Choose a language code and chapter. Read the source, then sign in to GitHub to create or edit the translation. Submit a pull request for review. One approved chapter is enough to add a new language to the menu.",
+  "sourceLink": "Read English source ↗", "createTranslation": "Create or edit translation with GitHub ↗", "translationGuide": "Translation instructions ↗",
+  "invalidLocale": "Enter a valid language code, such as ja, fr or pt-BR.", "translationFallback": "This chapter is not translated into the selected language yet. Showing English.",
+  "translateChapter": "Translate this chapter ↗", "coverage": "{count}/{total} chapters translated", "uiFallback": "Untranslated interface text uses English.", "translationDraft": "Replace this draft with your translated chapter before submitting. Copy the structure from the English source."
+}
