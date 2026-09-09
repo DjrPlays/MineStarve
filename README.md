@@ -41,7 +41,7 @@
 - `npm run dev:pages`：本地预览。
 - `npm run build:pages`：构建公开站点到 `docs/`。
 
-更新内容后重新构建，将源码与 `docs/` 一起提交到 `main`。GitHub Pages 从 `main` 分支的 `/docs` 目录自动发布。网站资源路径使用 `/MineStarve/`，更换仓库名称时需同步修改 `vite.pages.config.ts`。
+更新内容后重新构建，将源码与 `docs/` 一起提交到 `main`。GitHub Pages 从 `main` 分支的 `/docs` 目录自动发布。网站资源路径使用 `/MineStarve/`，更换仓库名称时需同步修改 `.hosting/hosting.json`。`npm run dev`、`npm run build` 同样使用这份发布配置。
 
 
 ## 字体与资源
