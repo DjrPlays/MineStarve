@@ -27,7 +27,7 @@ export default function Home() {
       <a className="brand" href="#" onClick={navigate}><BookOpen size={28}/><div>我的饥荒<span>模组玩家 Wiki</span></div></a>
       <div className="sidebar-edition"><span className="live-dot"/> 版本 1.4.5 <span>简体中文</span></div>
       <SidebarContent><nav aria-label="攻略目录"><p className="nav-label">攻略目录</p>{chapters.map((c, i) => { const Icon = icons[i] || BookOpen; return <a key={c.id} href={`#${c.id}`} onClick={navigate}><Icon size={17}/><span>{c.title}</span><span className="nav-index">{String(i+1).padStart(2,'0')}</span></a>; })}</nav></SidebarContent>
-      <div className="sidebar-foot"><span>饥荒联机版</span><p>模组作者 唐小可</p><a className="repository-link" href="https://github.com/zhouoneok-lab/MineStarve" target="_blank" rel="noreferrer">查看源码仓库 ↗</a><small>攻略更新 2026 年 9 月 9 日</small></div>
+      <div className="sidebar-foot"><span>饥荒联机版</span><p>模组作者 唐小可</p><small>攻略更新 2026 年 9 月 9 日</small></div>
     </Sidebar>
     {menu && <button className="menu-scrim" onClick={()=>setMenu(false)} aria-label="关闭目录"/>}
     <div className="wiki-body">
