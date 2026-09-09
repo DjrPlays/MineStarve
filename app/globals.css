@@ -42,6 +42,22 @@ main { max-width:1490px; margin:auto; padding:35px 36px 0; } .intro { position:r
 @media(max-width:850px) { .wiki-sidebar { display:none; width:264px; } .wiki-sidebar.mobile-open { display:flex; } .wiki-body { margin-left:0; width:100%; } .menu-toggle { display:flex; color:#d5e6b9; padding:5px; border:2px solid #11180a; background:#52623e; box-shadow:var(--raised); } .menu-scrim { position:fixed; inset:0; z-index:35; background:#10180bc9; } .topbar { padding-inline:20px; height:66px; } main { padding:27px 20px 0; } .breadcrumb { margin-right:auto; } .search { width:270px; } h1 { font-size:48px; } }
 @media(max-width:560px) { .breadcrumb { display:none; } .search { width:100%; } .topbar { gap:17px; padding-inline:15px; } main { padding-inline:12px; } .intro { padding:0 6px 7px; } .intro-meta { gap:10px; } .intro-meta span+span { padding-left:10px; } h1 { gap:12px; font-size:48px; } h1 .title-tag { font-size:20px; } .quick-links { grid-template-columns:1fr; gap:10px; margin-bottom:25px; } .quick-links>a { padding:12px 16px; gap:17px; } .quick-links div { flex:1; } .quick-links small { display:none; } .quick-links strong { margin:0; font-size:24px; } .quick-links span:not(.item-sprite) { display:block; } .quick-links svg { display:block; align-self:center; } .chapter { padding:20px 16px 13px; } .chapter h2 { font-size:26px; } [data-slot=table] { min-width:480px; } .page-footer { flex-wrap:wrap; padding:0 7px 24px; } .page-footer div { flex:1; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+.contribute-link { display:block; color:#afe275; margin-top:8px; }
+.contribution-guide { margin:0 0 28px; border:2px solid #586842; padding:12px 16px; color:#d8dfcf; background:#293321; scroll-margin-top:98px; }
+.contribution-guide summary { cursor:pointer; font-family:var(--pixel); font-size:20px; }
+.contribution-guide summary span { display:inline-block; margin-left:12px; font:12px/1.8 'Microsoft YaHei',sans-serif; color:#b5c5a4; }
+.contribution-guide p { font-size:14px; margin:12px 0; }
+.contribution-guide a { color:#b8e780; font-size:14px; text-decoration:underline; }
+.chapter-heading { flex-wrap:wrap; }
+.chapter-heading>.chapter-edit { margin-left:auto; padding:4px 9px; border:2px solid #465b2e; background:#b8cca0; color:#29431a; box-shadow:var(--raised); font:13px/1.6 'Microsoft YaHei',sans-serif; white-space:nowrap; }
+.chapter-heading>.chapter-edit:hover { background:#cee6ae; }
+.chapter-heading>.chapter-anchor { margin-left:0; }
+.markdown-content .note p { margin:4px 0; }
+.markdown-content [data-slot=table-container] { overflow-x:auto; }
+.markdown-content a { color:#315a1d; text-decoration:underline; }
+.markdown-content img { max-width:100%; height:auto; }
+.markdown-content ul { list-style:disc; padding-left:24px; }
+@media(max-width:560px) { .chapter-heading { gap:10px; } .chapter-heading>.chapter-edit { margin-left:0; } .contribution-guide summary span { display:block; margin-left:0; } }
 @media (pointer:fine) {
   html, body, body * { cursor:url('/items/diamond-sword.svg') 1 1, auto; }
   a, button, [role=button], a *, button * { cursor:url('/items/diamond-sword.svg') 1 1, pointer; }

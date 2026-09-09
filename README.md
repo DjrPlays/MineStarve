@@ -8,7 +8,8 @@
 
 ## 内容维护
 
-- `app/wiki-data.ts`：章节与攻略内容。
+- `content/*.md`：可参与编辑的章节文档。
+- `app/wiki-data.ts`：读取章节文档。
 - `app/page.tsx`：目录、章节筛选与阅读界面。
 - `app/globals.css`：响应式排版。
 - `public/items/atlas.png`：模组原有图标图集，使用 CSS 定位展示。
@@ -41,7 +42,11 @@
 - `npm run dev:pages`：本地预览。
 - `npm run build:pages`：构建公开站点到 `docs/`。
 
-更新内容后重新构建，将源码与 `docs/` 一起提交到 `main`。GitHub Pages 从 `main` 分支的 `/docs` 目录自动发布。网站资源路径使用 `/MineStarve/`，更换仓库名称时需同步修改 `.hosting/hosting.json`。`npm run dev`、`npm run build` 同样使用这份发布配置。
+编辑者使用 GitHub 账号登录，通过章节旁的“登录后编辑”提交修改申请；读者无需登录。具体步骤见 [参与编辑说明](CONTRIBUTING.md)。
+
+修改申请须由 `@tangxiaoke-lab` 审核并合并。GitHub Actions 会在合并到 `main` 后自动构建、发布，编辑者无需提交生成文件。申请阶段只做格式校验、类型检查和构建，不更新公开网站。
+
+网站资源路径使用 `/MineStarve/`，更换仓库名称时需同步修改 `.hosting/hosting.json`。`npm run dev`、`npm run build` 同样使用这份发布配置。
 
 
 ## 字体与资源
