@@ -3,7 +3,7 @@
 编辑时使用自己的 GitHub 账号登录，不需要提供密码或访问令牌给 Wiki。
 
 1. 在 Wiki 的对应章节点击“登录后编辑”。已登录 GitHub 的读者会直接进入编辑流程。
-2. GitHub 首次提示时，点击 Fork this repository，创建自己的副本。
+2. 其他编辑者首次收到提示时，点击 Fork this repository 创建自己的副本。仓库所有者 `tangxiaoke-lab` 无需 Fork，直接编辑；已有副本的编辑者继续使用原副本。
 3. 修改章节文字，可点击 Preview 预览文档。保留顶部标题、简介和原文件名。
 4. 点击 Commit changes / Propose changes，填写修改说明。
 5. 点击 Create pull request，将修改申请提交到 `tangxiaoke-lab/MineStarve` 的 `main` 分支。

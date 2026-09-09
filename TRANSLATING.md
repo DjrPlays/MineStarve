@@ -8,13 +8,13 @@ Reading is public. Sign in to GitHub to submit translations. Tangxiaoke reviews 
 
 1. 打开 Wiki 的“添加翻译”，输入语言代码，例如 `ja`、`fr`、`de`、`pt-BR`、`zh-Hant`。
 2. 选择一个章节，点击“查看英文原文”。复制文档内容作为翻译底稿；也可以参考 `content/` 中的简体中文原文。
-3. 点击“登录后创建或编辑译文”。首次编辑按提示 Fork 仓库。
+3. 点击“登录后创建或编辑译文”。其他编辑者首次编辑按提示 Fork 仓库；仓库所有者无需 Fork，直接编辑。
 4. 用完整译文替换草稿中的 `TRANSLATION_DRAFT`。保留一级标题、单段简介和正文结构，文件名不要改。
 5. 保存修改并创建 Pull Request。唐小可审核、合并后，语言菜单会自动加入此语言。
 
 1. Open Add a translation and enter a language code, such as `ja`, `fr`, `de`, `pt-BR` or `zh-Hant`.
 2. Choose a chapter and open Read English source. Copy the document as your starting point. Simplified Chinese originals are also available in `content/`.
-3. Choose Create or edit translation with GitHub. Fork the repository if prompted.
+3. Choose Create or edit translation with GitHub. Contributors fork the repository if prompted; repository owners edit directly without forking.
 4. Replace all `TRANSLATION_DRAFT` placeholders with the translated document. Keep a level-one title, a one-paragraph introduction and the body, separated by blank lines. Keep the filename unchanged.
 5. Save and create a pull request. After Tangxiaoke reviews and merges it, the language appears in the menu automatically.
 
