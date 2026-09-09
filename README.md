@@ -2,7 +2,7 @@
 
 《我的饥荒》1.4.5 中文玩家攻略网站，采用《我的世界》物品栏风格。包含 10 个资料章节、关键词搜索、配方与附魔速查，支持手机阅读。
 
-[打开在线 Wiki](https://zhouoneok-lab.github.io/MineStarve/) · [源码仓库](https://github.com/zhouoneok-lab/MineStarve)
+[打开在线 Wiki](https://tangxiaoke-lab.github.io/MineStarve/) · [源码仓库](https://github.com/tangxiaoke-lab/MineStarve)
 
 网站通过 GitHub Pages 公开发布。
 
