@@ -8,7 +8,7 @@
 4. 点击 Commit changes / Propose changes，填写修改说明。
 5. 点击 Create pull request，将修改申请提交到 `tangxiaoke-lab/MineStarve` 的 `main` 分支。
 
-保存到个人副本不等于提交审核；请完成最后一步。只有唐小可审核并合并后，公开 Wiki 才会更新。修改申请中的内容和账号名公开可见。
+保存到个人副本不等于提交审核；请完成最后一步。只有管理员审核并合并后，公开 Wiki 才会更新。修改申请中的内容和账号名公开可见。
 
 ## 文档格式
 
