@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
+@source not '../docs';
 @custom-variant dark (&:is(.dark *));
 @font-face { font-family:'Fusion Pixel'; src:url('/fonts/fusion-pixel-zh-hans.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
 @theme inline {
@@ -9,6 +10,19 @@
 :root { --background:#242721; --foreground:#242424; --card:#c6c6c6; --primary:#487d24; --muted:#b4b4b4; --muted-foreground:#555; --accent:#c7dbab; --border:#575953; --sidebar:#292d25; --radius:0px; --pixel:'Fusion Pixel','Microsoft YaHei',sans-serif; --raised:inset 3px 3px #fff9,inset -3px -3px #0005; --sunken:inset 3px 3px #0005,inset -3px -3px #fff9; }
 .dark { --background:#242721; --foreground:#ededed; --card:#42483c; --primary:#9ad94b; --muted:#33382e; --muted-foreground:#c2c6bc; --accent:#405b2d; --border:#131610; --sidebar:#20251a; }
 * { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:98px; } body { margin:0; color:var(--foreground); background:var(--background); background-image:linear-gradient(45deg,#ffffff03 25%,transparent 25%,transparent 75%,#ffffff03 75%),linear-gradient(45deg,#ffffff03 25%,transparent 25%,transparent 75%,#ffffff03 75%); background-size:24px 24px; background-position:0 0,12px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif; font-size:16px; line-height:1.85; } a { text-decoration:none; } button { cursor:pointer; } button,a,input { -webkit-tap-highlight-color:transparent; } a:focus-visible,button:focus-visible { outline:3px solid #c2ed81; outline-offset:4px; } svg { stroke-width:2; }
+* { scrollbar-color:#82bd31 #11160a; scrollbar-width:auto; }
+@supports selector(::-webkit-scrollbar) {
+  * { scrollbar-color:auto; }
+  ::-webkit-scrollbar { width:16px; height:16px; }
+  ::-webkit-scrollbar-track { background:#11160a; border:2px solid #080b04; box-shadow:inset 2px 0 #334322,inset -2px 0 #334322; }
+  ::-webkit-scrollbar-thumb { min-height:40px; border:3px solid #11160a; border-radius:0; background:repeating-linear-gradient(0deg,#82bd31 0 10px,#527c1b 10px 12px); box-shadow:inset 2px 0 #c1ef70,inset -2px 0 #426b13; }
+  ::-webkit-scrollbar-thumb:hover { background:repeating-linear-gradient(0deg,#a2da48 0 10px,#699d23 10px 12px); }
+  ::-webkit-scrollbar-thumb:horizontal { background:repeating-linear-gradient(90deg,#82bd31 0 10px,#527c1b 10px 12px); }
+  ::-webkit-scrollbar-corner { background:#11160a; }
+}
+.recipe-item { display:flex; align-items:center; gap:12px; }
+.recipe-icon { display:inline-block; flex:0 0 32px; width:32px; height:32px; background-image:url('/items/atlas.png'); background-size:2048px 1024px; background-position:var(--item-x) var(--item-y); image-rendering:pixelated; outline:2px solid #62645b; box-shadow:inset 2px 2px #0005,inset -2px -2px #fff9; background-color:#aaa; }
+.recipe-icon-ring { background-image:url('/items/seven-curses-ring.png'); background-size:32px 32px; background-position:center; }
 .wiki-shell { display:flex; --sidebar-width:264px; }
 .wiki-sidebar { position:fixed; z-index:40; inset:0 auto 0 0; height:100dvh; width:264px; padding:28px 16px 22px; background:#36382f; color:#eee; border-right:4px solid #11130f; box-shadow:inset -3px 0 #626551; }
 .brand { display:flex; gap:12px; align-items:center; padding:0 10px; color:#f0f1e8; font-family:var(--pixel); font-size:30px; line-height:1.2; text-shadow:3px 3px #10150d; } .brand svg { color:#a9db72; flex-shrink:0; width:32px; height:32px; } .brand span { display:block; color:#afb4a3; font-size:14px; margin-top:9px; text-shadow:2px 2px #171c14; }

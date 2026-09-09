@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { SidebarProvider, Sidebar, SidebarContent } from '@/components/ui/sidebar';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { chapters } from './wiki-data';
+import { RecipeItem } from './recipe-item';
 const icons = [Package, Package, Sparkles, BookOpen, Shield, Package, Compass, Skull, Skull, BookOpen];
 export default function Home() {
   const [query, setQuery] = useState('');
@@ -39,7 +40,7 @@ export default function Home() {
           {visible.length === 0 && <div className="no-results"><Search size={30}/><h2>没有找到相关攻略</h2><p>试试“附魔”“书架”“奶桶”或“七咒”。</p></div>}
           {visible.map(c => <section id={c.id} key={c.id} className="chapter"><div className="chapter-heading"><span>{String(chapters.indexOf(c)+1).padStart(2,'0')}</span><h2>{c.title}</h2><a href={`#${c.id}`} aria-label={`链接到${c.title}`}>#</a></div><p className="chapter-summary">{c.summary}</p>{c.blocks.map((b,j)=><div key={j} className="content-block">
             {b.heading && <h3>{b.heading}</h3>}{b.text && <p>{b.text}</p>}{b.steps && <ol className="steps">{b.steps.map((s,k)=><li key={k}>{s}</li>)}</ol>}
-            {b.headers && b.rows && <Table><TableHeader><TableRow>{b.headers.map(h=><TableHead key={h}>{h}</TableHead>)}</TableRow></TableHeader><TableBody>{b.rows.map((row,k)=><TableRow key={k}>{row.map((v,l)=><TableCell key={l}>{v}</TableCell>)}</TableRow>)}</TableBody></Table>}
+            {b.headers && b.rows && <Table><TableHeader><TableRow>{b.headers.map(h=><TableHead key={h}>{h}</TableHead>)}</TableRow></TableHeader><TableBody>{b.rows.map((row,k)=><TableRow key={k}>{row.map((v,l)=><TableCell key={l}>{c.id === 'recipes' && l === 0 ? <RecipeItem name={v} /> : v}</TableCell>)}</TableRow>)}</TableBody></Table>}
             {b.note && <p className="note"><strong>机制说明</strong>{b.note}</p>}
           </div>)}</section>)}
         </div></div>
