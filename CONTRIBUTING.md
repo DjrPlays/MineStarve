@@ -1,6 +1,6 @@
 # 参与完善攻略
 
-阅读 Wiki 无需登录。编辑时使用自己的 GitHub 账号登录，不需要提供密码或访问令牌给 Wiki。
+编辑时使用自己的 GitHub 账号登录，不需要提供密码或访问令牌给 Wiki。
 
 1. 在 Wiki 的对应章节点击“登录后编辑”。已登录 GitHub 的读者会直接进入编辑流程。
 2. GitHub 首次提示时，点击 Fork this repository，创建自己的副本。
@@ -20,11 +20,3 @@
 - 表格用 `|` 分隔单元格，请保留表头下方的 `| --- |` 分隔行。
 - 机制说明使用 `> 说明内容`。
 - 不需要编辑 `docs/`、网页代码或发布配置。
-
-## 审核与发布
-
-审核入口：<https://github.com/tangxiaoke-lab/MineStarve/pulls>
-
-打开修改申请，在 Files changed 查看前后差异。确认后通过 Review changes → Approve，再点击 Merge pull request 合并；不采纳时点击 Close pull request。
-
-主分支要求代码所有者 `@tangxiaoke-lab` 审核，新增提交会使旧审核失效。申请仅执行内容格式校验、类型检查和正式构建，不发布预览。合并到 `main` 后自动构建、发布；发布失败时线上继续保留上一版。仓库所有者保留管理员权限，可直接维护自己的内容。
