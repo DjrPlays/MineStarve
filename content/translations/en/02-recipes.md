@@ -19,6 +19,6 @@ Materials, technology requirements and additional conditions for the main recipe
 | Milk Bucket | Hold a Bucket and right-click an adult Beefalo that is ready to be milked. |
 | Enchanted Book | Randomly enchant a normal book, or transfer compatible enchantments to it. |
 | Totem of Undying | Each Klei account receives 1 on its first spawn in the world. Give a Rabbit King weapon to the Pig King for 2 totems. |
-| Ring of Seven Curses | Granted and bound automatically when Mysterious Relics is enabled. |
+| Ring of Seven Curses | Granted and bound automatically when Enigmatic Legacy is enabled. |
 
 > Soul Stitching immediately repairs one Soul Fracture stack; it does not produce a stored potion. Both ordinary book recipes produce the same item, so they do not count as two different book types for a bookshelf.

@@ -1,6 +1,6 @@
-# Seven Curses and Mysterious Relics
+# Seven Curses and Enigmatic Legacy
 
-Mysterious Relics is disabled by default. Enabling it automatically grants, equips and binds the Ring of Seven Curses, introducing an ongoing set of challenges.
+Enigmatic Legacy is disabled by default. Enabling it automatically grants, equips and binds the Ring of Seven Curses, introducing an ongoing set of challenges.
 
 ## Seven curses
 
