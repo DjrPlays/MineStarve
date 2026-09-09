@@ -1,10 +1,10 @@
 # 我的饥荒模组 Wiki
 
-《我的饥荒》1.4.5 中文玩家攻略网站，采用《我的世界》物品栏风格。包含 10 个资料章节、关键词搜索、配方与附魔速查，支持手机阅读。此页面按用户明确要求只提供中文版。
+《我的饥荒》1.4.5 中文玩家攻略网站，采用《我的世界》物品栏风格。包含 10 个资料章节、关键词搜索、配方与附魔速查，支持手机阅读。
 
-[打开在线 Wiki](https://minestarve-wiki.zhouoneok.chatgpt.site) · [源码仓库](https://github.com/zhouoneok-lab/MineStarve)
+[打开在线 Wiki](https://zhouoneok-lab.github.io/MineStarve/) · [源码仓库](https://github.com/zhouoneok-lab/MineStarve)
 
-在线 Sites 页面目前仅站点所有者可访问；本仓库保存网页源码。
+网站通过 GitHub Pages 公开发布，所有人均可访问，无需登录。
 
 ## 内容维护
 
@@ -36,8 +36,12 @@
 
 ## 开发与构建
 
-使用生成项目保留的 npm 锁文件。安装依赖后运行 `npm run dev` 预览，`npm run build` 构建。
-不运行冒烟测试或模拟测试。页面内容是源码核对后的玩家指南，并未进行游戏实战验证。
+使用 Node.js 22.13 或更新版本，运行 `npm ci` 安装依赖。
+
+- `npm run dev:pages`：本地预览。
+- `npm run build:pages`：构建公开站点到 `docs/`。
+
+更新内容后重新构建，将源码与 `docs/` 一起提交到 `main`。GitHub Pages 从 `main` 分支的 `/docs` 目录自动发布。网站资源路径使用 `/MineStarve/`，更换仓库名称时需同步修改 `vite.pages.config.ts`。
 
 
 ## 字体与资源
