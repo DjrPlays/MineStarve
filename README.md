@@ -4,7 +4,7 @@
 
 [打开在线 Wiki](https://zhouoneok-lab.github.io/MineStarve/) · [源码仓库](https://github.com/zhouoneok-lab/MineStarve)
 
-网站通过 GitHub Pages 公开发布，所有人均可访问，无需登录。
+网站通过 GitHub Pages 公开发布。
 
 ## 内容维护
 
