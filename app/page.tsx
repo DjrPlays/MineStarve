@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
+import { flushSync } from 'react-dom';
 import { BookOpen, Search, ArrowUpRight, Compass, Package, Sparkles, Skull, Shield, Settings, Menu, X, ChevronRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { SidebarProvider, Sidebar, SidebarContent } from '@/components/ui/sidebar';
@@ -11,20 +12,27 @@ export default function Home() {
   const [menu, setMenu] = useState(false);
   const normalized = query.trim().toLocaleLowerCase();
   const visible = chapters.filter(c => !normalized || JSON.stringify(c).toLocaleLowerCase().includes(normalized));
-  function navigate() { setQuery(''); setMenu(false); }
+  function navigate(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    const hash = event.currentTarget.hash;
+    flushSync(() => { setQuery(''); setMenu(false); });
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    else window.scrollTo({ top: 0 });
+    window.history.replaceState(null, '', hash || window.location.pathname);
+  }
   return <SidebarProvider className="wiki-shell">
     <a className="skip-link" href="#content">跳转到攻略正文</a>
     <Sidebar collapsible="none" className={`wiki-sidebar ${menu ? 'mobile-open' : ''}`}>
       <a className="brand" href="#" onClick={navigate}><BookOpen size={28}/><div>我的饥荒<span>模组玩家 Wiki</span></div></a>
       <div className="sidebar-edition"><span className="live-dot"/> 版本 1.4.5 <span>简体中文</span></div>
-      <SidebarContent><nav aria-label="攻略目录"><p className="nav-label">开始探索</p>{chapters.map((c, i) => { const Icon = icons[i] || BookOpen; return <a key={c.id} href={`#${c.id}`} onClick={navigate}><Icon size={17}/><span>{c.title}</span><span className="nav-index">{String(i+1).padStart(2,'0')}</span></a>; })}</nav></SidebarContent>
-      <div className="sidebar-foot"><span>饥荒联机版</span><p>模组作者 唐小可</p><small>攻略更新 2026 年 9 月 9 日</small></div>
+      <SidebarContent><nav aria-label="攻略目录"><p className="nav-label">攻略目录</p>{chapters.map((c, i) => { const Icon = icons[i] || BookOpen; return <a key={c.id} href={`#${c.id}`} onClick={navigate}><Icon size={17}/><span>{c.title}</span><span className="nav-index">{String(i+1).padStart(2,'0')}</span></a>; })}</nav></SidebarContent>
+      <div className="sidebar-foot"><span>饥荒联机版</span><p>模组作者 唐小可</p><a className="repository-link" href="https://github.com/zhouoneok-lab/MineStarve" target="_blank" rel="noreferrer">查看源码仓库 ↗</a><small>攻略更新 2026 年 9 月 9 日</small></div>
     </Sidebar>
     {menu && <button className="menu-scrim" onClick={()=>setMenu(false)} aria-label="关闭目录"/>}
     <div className="wiki-body">
       <header className="topbar"><button className="menu-toggle" onClick={()=>setMenu(!menu)} aria-label={menu?'关闭目录':'打开目录'} aria-expanded={menu}>{menu?<X/>:<Menu/>}</button><span className="breadcrumb">玩家指南 <ChevronRight size={14}/> <strong>攻略与资料</strong></span><label className="search"><Search size={18}/><Input aria-label="搜索攻略" placeholder="搜索物品、附魔、玩法…" value={query} onChange={e=>setQuery(e.target.value)}/>{query && <button aria-label="清空搜索" onClick={()=>setQuery('')}><X size={16}/></button>}</label></header>
       <main id="content">
-        <div className="intro"><div className="eyebrow">我的饥荒 · 生存手册</div><h1>从第一格物品栏<br className="mobile-break"/>到你的下一次冒险<span>。</span></h1><p>收好物资，积累经验，给装备附上魔法。这里是《我的饥荒》的玩法攻略与数值速查。</p><div className="intro-meta"><span>当前版本 1.4.5</span><span>12 个攻略章节</span><span>默认配置与七咒挑战</span></div></div>
+        <div className="intro"><div className="eyebrow">饥荒联机版 · 模组生存手册</div><h1>我的饥荒<span className="title-tag">攻略百科</span></h1><p>收好物资，积累经验，给装备附上魔法。这里是《我的饥荒》的玩法攻略与数值速查。</p><div className="intro-meta"><span>当前版本 1.4.5</span><span>12 个攻略章节</span><span>默认配置与七咒挑战</span></div><div className="experience-track" aria-hidden="true"><span/></div></div>
         {!normalized && <div className="quick-links"><a href="#enchanting"><span className="item-sprite item-book" aria-hidden="true"/><div><small>装备成长</small><strong>第一次附魔</strong><span>书架、硝石与等级消耗</span></div><ArrowUpRight/></a><a href="#totem"><span className="item-sprite item-totem" aria-hidden="true"/><div><small>生存准备</small><strong>用好不死图腾</strong><span>装备在遗物栏才会生效</span></div><ArrowUpRight/></a><a href="#recipes"><span className="item-sprite item-bucket" aria-hidden="true"/><div><small>随手查阅</small><strong>配方速查</strong><span>材料数量与制作条件</span></div><ArrowUpRight/></a></div>}
         <div className="article-layout"><div className="chapters">
           {normalized && <p className="search-result" role="status">找到 {visible.length} 个包含“{query}”的章节。<button onClick={()=>setQuery('')}>显示全部</button></p>}
@@ -40,4 +48,3 @@ export default function Home() {
     </div>
   </SidebarProvider>;
 }
-
