@@ -1,6 +1,6 @@
 # 我的饥荒模组 Wiki
 
-《我的饥荒》1.4.5 中文玩家攻略网站，采用《我的世界》物品栏风格。包含 12 个章节、关键词搜索、配方与附魔速查，支持手机阅读。此页面按用户明确要求只提供中文版。
+《我的饥荒》1.4.5 中文玩家攻略网站，采用《我的世界》物品栏风格。包含 10 个资料章节、关键词搜索、配方与附魔速查，支持手机阅读。此页面按用户明确要求只提供中文版。
 
 [打开在线 Wiki](https://minestarve-wiki.zhouoneok.chatgpt.site) · [源码仓库](https://github.com/zhouoneok-lab/MineStarve)
 
@@ -18,7 +18,7 @@
 攻略依据原始模组的以下文件整理。这些 Lua 文件属于游戏模组，不包含在本网页源码仓库中；后续模组更新时需同步核对。
 
 - `modinfo.lua`：模组版本、默认配置。
-- `modmain.lua`：实际启用模块，末影龙入口停用。
+- `modmain.lua`：实际启用模块。
 - `scripts/core_minecraft_inv_hud/data/tuning.lua`：配方、经验、附魔、图腾、奶桶、船、七咒数值。
 - `scripts/core_minecraft_inv_hud/data/recipes.lua`：配方材料和科技条件。
 - `scripts/mc_enchanting/definitions.lua`：附魔适用范围和互斥。
